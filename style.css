@@ -1,0 +1,463 @@
+*{
+
+}
+body{
+    
+    padding: 12px 120px;
+    /* display: flex;
+    flex-direction: row; */
+
+}
+
+.topper{
+   display: flex; 
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+}
+.topper ul{
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-between;   
+}
+.topper img{
+    width: 201px;
+    height: 55px;
+}
+
+.topper ul li{
+    margin-right: 50px;
+    font-family: 'Times';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: #290E17;
+}
+.topper button{
+    color: white;
+    border-radius: 10px;
+    background-color: #7C2946;
+    width: 161px;
+    height: 56px;
+    border: none;
+    outline: none;
+    font-family: 'Times';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+}
+span{
+    color: #7C2946;
+}
+.light{
+    font-weight: lighter;
+    font-size: small;
+}
+.guide{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 72px;
+  margin-bottom: 128px;
+}
+.guide .left{
+
+}
+.guide h1{
+    width: 534px;
+    height: 128px;
+    font-family: 'Times';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 64px;
+    color: #290E17;
+}
+.guide img{
+width: 431px;
+height: 425px;
+border: 1px solid rgba(51, 91, 39, 0.5);
+border-radius: 10px
+}
+.about img{
+    width: 490px;
+    height: 354px;
+    border: 1px solid rgba(51, 91, 39, 0.5);
+    border-radius: 10px
+    }
+.guide button{
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    width: 161px;
+    height: 56px;
+    background: #7C2946;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+}
+.guide h4{
+
+    width: 538px;
+    height: 96px;
+    font-family: 'Times';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #290E17;
+}
+
+.about{
+    display: flex;
+    justify-content: space-between;
+}
+.story{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    margin-top: 10%;
+}
+.about h1{
+width: 245px;
+height: 55px;
+font-family: 'Times';
+font-style: normal;
+font-weight: 700;
+font-size: 48px;
+line-height: 55px;
+}
+.about h2{
+    width: 222px;
+    height: 37px;
+    font-family: 'Times';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 37px;
+    color: #290E17;
+}
+.about h4{
+    font-family: 'Times';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #290E17;
+    width: 578px;
+}
+
+.story button{
+   
+    font-family: 'Times';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #7C2946;
+    border-radius: 10px;
+    width: 161px;
+    height: 56px;
+    outline: none;
+    border: solid .5px  #7C2946;
+    background: transparent;
+    
+}
+.works h2{
+    width: 275px;
+    height: 55px;    
+    font-family: 'Times';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    color: #290E17;
+    margin-bottom: 8px;
+    
+}
+    .works h5{
+    width: 900px;
+    height: 40px;
+    font-family: 'Times';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: #290E17;
+    margin-bottom: 57px;
+}
+.works{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 172px;
+}
+
+.way ul{
+    display: flex; 
+   flex-direction: row;
+   list-style-type: none;
+   justify-content: space-between;
+}
+.way ul li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.way img{
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+    margin-bottom: 16px;
+    width: 72px;
+    height: 72px;
+}
+.way p{
+    width: 221px;
+    height: 20px;  
+    font-family: 'Times';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: #290E17;
+    margin-bottom: 150px;
+}
+.register{
+    display: flex;
+    flex-direction: row;
+}
+ .register h1{
+    font-family: 'Times';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 37px;
+    color: #290E17;
+    margin-bottom: 24px;
+}
+.register h4{
+    width: 590px;
+    height: 45px;
+    font-family: 'Times';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 24px;
+}
+.register button{    
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    width: 161px;
+    height: 56px;
+    background: #7C2946;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+}
+.reg{
+    margin-top: 100px;
+}
+.register img{
+    width: 590px;
+    height: 393px;
+    left: 730px;
+    top: 2027px;
+    border-radius: 15px;
+    margin-bottom: 99px;
+}
+.verify{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+.verify img{
+    width: 590px;
+    height: 393px;
+    border-radius: 15px;
+}
+.verify h1{
+    width: 271px;
+    height: 37px;
+    font-family: 'Times';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    color: #290E17;
+    margin-top: 136px;
+}
+.verify h4{
+    width: 590px;
+    height: 42px;
+    font-family: 'Times';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    color: #290E17;
+    margin-top: 24px;
+}
+.ver{
+    margin-left: 20px;
+}
+.upload{
+    display: flex;
+    flex-direction: row;
+}
+.upload h1{
+    width: 315px;
+    height: 37px;
+    font-family: 'Times';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    color: #290E17;
+    margin-top: 264px;
+}
+.upload h4{
+    margin-bottom: 24px;
+    width: 590px;
+    height: 59px;
+    font-family: 'Times';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    color: #290E17;
+}
+.upload img{
+    margin-top: 121px;
+    width: 590px;
+    height: 393px;
+    left: 730px;
+    top: 3033px;
+    border-radius: 15px;
+}
+.kin{
+    display: flex;
+}
+.kin img{
+    margin-top: 122px;
+    width: 590px;
+    height: 393px;
+    border-radius: 15px
+}
+.kin h1{
+    margin-top: 232px;
+    width: 422px;
+    height: 37px;
+    font-family: 'Times';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    color: #290E17;
+}
+.kin h4{
+    margin-top: 24px;
+    width: 590px;
+    height: 46px;
+    font-family: 'Times';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    color: #290E17;
+}
+.kin button{
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    width: 161px;
+    height: 56px;
+    background: #7C2946;
+    border: none;
+    outline: none;
+    border-radius: 10px; 
+}
+.question{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 83px 0;
+    width: auto;
+    height: 732px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 36px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    margin-top: 151px;
+}
+.question h1{
+    width: 496px;
+    height: 110px;
+    font-family: 'Times';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 55px;
+    text-align: center;
+    color: #290E17;
+    margin-top: 83px;
+    justify-content: center;
+}
+.question button{
+    color: white;
+    font-family: 'Times';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    background-color: #7C2946;
+    border-radius: 10px;
+    width: 161px;
+    height: 56px;
+    outline: none;
+    border: none;
+    margin-top: 72px;
+
+}
+.question img{
+    width: 200px;
+    height: 200px;
+    margin-top: 72px;
+    /* justify-content: space-between;
+    align-items: center; */
+}
+.question p{
+    width: 31px;
+    height: 20px;
+    font-family: 'Times';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    color: #290E17;
+}
+.question ul{
+    width: auto;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.question ul li{
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
