@@ -180,8 +180,6 @@ line-height: 55px;
     
 }
     .works h5{
-    width: 900px;
-    height: 40px;
     font-family: 'Times';
     font-style: normal;
     font-weight: 400;
@@ -339,7 +337,7 @@ line-height: 55px;
 }
 .upload img{
     margin-top: 121px;
-    width: 590px;
+    width: 490px;
     height: 393px;
     left: 730px;
     top: 3033px;
@@ -350,7 +348,7 @@ line-height: 55px;
 }
 .kin img{
     margin-top: 122px;
-    width: 590px;
+    width: 490px;
     height: 393px;
     border-radius: 15px
 }
@@ -393,7 +391,7 @@ line-height: 55px;
     flex-direction: column;
     align-items: center;
     padding: 83px 0;
-    width: auto;
+    width: 1200px;
     height: 732px;
     background: #FFFFFF;
     box-shadow: 0px 4px 36px 12px rgba(0, 0, 0, 0.1);
@@ -461,3 +459,4 @@ line-height: 55px;
     flex-direction: column;
     align-items: center;
 }
+
