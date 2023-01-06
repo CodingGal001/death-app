@@ -1,12 +1,16 @@
-/* *{
-
-} */
+*{
+margin: 0%;
+padding: 0%;
+}
 body{
     
-    padding: 12px 120px;
+    
     /* display: flex;
     flex-direction: row; */
 
+}
+.all{
+    padding: 12px 120px;
 }
 
 .topper{
@@ -33,6 +37,7 @@ body{
     font-size: 16px;
     line-height: 20px;
     color: #290E17;
+    width: auto;
 }
 .topper button{
     color: white;
@@ -120,6 +125,7 @@ border-radius: 10px
     align-items: left;
     justify-content: center;
     margin-top: 10%;
+    width: 576px;
 }
 .about h1{
 width: 245px;
@@ -139,6 +145,7 @@ line-height: 55px;
     font-size: 32px;
     line-height: 37px;
     color: #290E17;
+    
 }
 .about h4{
     font-family: 'Times';
@@ -148,6 +155,7 @@ line-height: 55px;
     line-height: 24px;
     color: #290E17;
     width: 578px;
+    margin: 16px 0;
 }
 
 .story button{
@@ -457,4 +465,187 @@ line-height: 55px;
     flex-direction: column;
     align-items: center;
 }
-
+.information{
+    display: flex;
+    margin-top: 156px; 
+    justify-content: space-between;
+    width: 100%;
+}
+.informtion h1{
+    width: 520px;
+    font-family: 'Times';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    margin-bottom: 24px;
+}
+.informtion h6{
+    width: 447px;
+    font-family: 'Times';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+}
+.things{
+    width: 50% ;
+}
+.things h6{
+    margin-top: 24px;
+    font-family: 'Times';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #290E17;
+}
+.things h1{
+    font-family: 'Times';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 55px;
+    color: #290E17;
+}
+.info ul li{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    width: 540px;
+    height: 56px;
+    align-items: center;
+    justify-content: space-between;
+    background: #F1F1F1;
+    padding: 0 10px;
+    margin-bottom: 30px;
+ 
+}
+.info ul li p{
+    font-family: 'Times';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: rgba(41, 14, 23, 0.8);
+}
+.mobile h1{
+    font-family: 'Times';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 37px;
+    color: #290E17;
+    margin-bottom: 50px;
+}
+.mobile{
+    margin-top: 170px;
+}
+.subscribe{
+    margin-top: 507px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.subscribe h1{
+    font-family: 'Times';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 55px;
+    text-align: center;
+    color: #290E17;
+}
+.subscribe p{
+    font-family: 'Times';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: #290E17;
+    margin-top: 16px;
+    width: 817px;
+}
+.subscribe button{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 161px;
+    height: 56px;
+    background: #7C2946;
+    border-radius: 10px;
+    font-family: 'Times';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+    border: none;
+    outline: none;
+    margin-top: 40px;
+}
+.footer{
+    background: #19080E;
+    height: 418px;
+    margin-top: 134px;
+    padding: 60px 120px;
+}
+.livefooter h5{
+    width: 859px;
+    height: 35px;
+    font-family: 'Times';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #FFFFFF;
+    margin-top: 99px;
+}
+.topfooter{
+    display: flex;
+    justify-content: space-between;
+}
+.topfooter h1{
+    font-family: 'Times';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+.topfooter p{
+    font-family: 'Times';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #FFFFFF;
+    margin-top: 16px;
+}
+.social{
+    display: flex;
+    width: 192px;
+    margin-top: 32px;
+    justify-content: space-between;
+}
+.socio{
+    display: flex;
+    width: 201px;
+    margin-top: 32px;
+    align-items: center;
+    justify-content: space-between;
+}
+.socio img{
+    width: 24px;
+    height: 24px;
+    padding-top: 5px;
+}
+.socio p{
+    font-family: 'Times';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #FFFFFF;
+}
