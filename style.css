@@ -102,9 +102,10 @@ border-radius: 10px
     border: none;
     outline: none;
     border-radius: 10px;
+    margin-top: 24px;
 }
 .guide h4{
-
+    margin-top: 24px;
     width: 538px;
     height: 96px;
     font-family: 'Times';
@@ -391,6 +392,7 @@ line-height: 55px;
     border: none;
     outline: none;
     border-radius: 10px; 
+    margin-top: 24px;
 }
 .question{
     display: flex;
@@ -535,12 +537,25 @@ line-height: 55px;
     line-height: 37px;
     color: #290E17;
     margin-bottom: 50px;
+    width: 438px;
+    text-align: center;
 }
 .mobile{
     margin-top: 170px;
+    border: 1px solid rgba(25, 8, 14, 0.2);
+    filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.5));
+    border-radius: 10px;
+    width: 100%;
+    padding: 0 20px;
+}
+.iphone{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
 }
 .subscribe{
-    margin-top: 507px;
+    margin-top: 112px;
     display: flex;
     flex-direction: column;
     justify-content: center;
