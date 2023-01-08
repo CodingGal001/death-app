@@ -1,0 +1,119 @@
+.input{
+    box-sizing: border-box;
+    width: 708px;
+    border: 1px solid rgba(2, 8, 13, 0.15);
+    filter: drop-shadow(15px 15px 25px rgba(2, 8, 13, 0.25));
+    border-radius: 10px;
+    padding: 101px 62px;
+}
+
+.new-all{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.google p{
+    width: 149px;
+    height: 20px;
+    font-family: 'Times';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    text-decoration-line: underline;
+    color: #1E1E1E;
+    list-style-type: none;
+    padding-left: 10px;
+}
+.total{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.google{
+    display: flex;
+    align-items: center;
+}
+.email{
+    display: flex;
+    flex-direction: column;
+    margin-top: 56px;
+}
+.email h1{
+    width: 69px;
+    height: 20px;
+    font-family: 'Times';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    /* line-height: 20px; */
+    color: #1E1E1E;
+    margin-bottom: 12px;
+}
+.email img{
+    width: 20px;
+    height: 20px;
+}
+.email input{
+    width: 61px;
+    height: 20px;
+    font-family: 'Times';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: rgba(30, 30, 30, 0.5);
+}
+.cl{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px 0px 0px 10px;
+    width: 568px;
+    height: 56px;
+    border: 1px solid rgba(2, 8, 13, 0.2);
+    border-radius: 10px;
+}
+.cl input{
+    background: transparent ;
+    border: none;
+    outline: none;
+    padding: 0px 10px;
+    width: 100%;
+
+}
+.free{
+    margin-top: 56px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+    width: 568px;
+    height: 56px;
+    background: #7C2946;
+    box-shadow: 0px 4px 8px rgba(239, 169, 54, 0.15);
+    border-radius: 10px;
+    justify-content: center;
+    border: none;
+    outline: none;
+    font-family: 'Times';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    color: white;
+}
+.up{  
+    font-family: 'Times';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    color: #1E1E1E;
+    margin-top: 56px;
+    display: flex;
+    align-items: center;
+}
+.colour{
+  color:   #7C2946;
+}
