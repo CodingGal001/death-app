@@ -19,7 +19,7 @@
                 <li class="topper">End-of-life planning <img src="./images/Vector.png" alt="" style="width: 10px; height: 10px; padding-left: 2px;"></li> 
                 <li class="topper"><a href="./about.html">Who we are</a></li>  
                 <li class="topper"><a href="#work"></a>  How it works</li> 
-                <li class="topper"> <a href="./contact.html"></a> Contact Us</li> 
+                <li class="topper"> <a href="./contact.html"> Contact us</a></li> 
                 <li class="topper"> <a href="./login.html">Login</a> </li>
                 <div>
                  <button><a href="./signup.html">sign Up</a></button>
@@ -41,40 +41,43 @@
             </div>
         </div>
 
-        <div class="email">
+        <!-- <form action="" type="submit"> -->
+            <div class="email">
 
-        <div class="email">
-            <h1>
-                Full Name
-            </h1>
-            <div class="cl">
-            <img src="./images/user.png " alt="">
-            <input type="text" required placeholder="full name">
-            </div>
-        </div>
-        <div class="email">
-            <h1>
-                Email
-            </h1>
-            <div class="cl">
-            <img src="./images/sms.png" alt="">
-            <input type="email" required placeholder="help.liveon@gmail.com">
-           </div>
-        </div>
-        <div class="email">
-            <h1>
-                password
-            </h1>
-            <div class="cl" >
-            <img src="./images/lock.png" alt="">
-            <input type="text and number" required placeholder="Minimum 8 characters" >
-        </div>
-        </div>
-
-        </div>
-        <div>
-            <button class="free"><a href="./authentication.html">Create my free Account</a> </button>
-        </div>
+                <div class="email">
+                    <h1>
+                        Full Name
+                    </h1>
+                    <div class="cl">
+                    <img src="./images/user.png " alt="">
+                    <input type="text" required placeholder="full name" id="username">
+                    </div>
+                </div>
+                <div class="email">
+                    <h1>
+                        Email
+                    </h1>
+                    <div class="cl">
+                    <img src="./images/sms.png" alt="">
+                    <input type="email" required placeholder="help.liveon@gmail.com" id="email">
+                   </div>
+                </div>
+                <div class="email">
+                    <h1>
+                        password
+                    </h1>
+                    <div class="cl" >
+                    <img src="./images/lock.png" alt="">
+                    <input type="text and number" required placeholder="Minimum 8 characters" id="password">
+                </div>
+                </div>
+        
+                </div>
+                <div>
+                    <input type="submit" class="free"  id='sighUp' name="signup_submit" value="Create my free Account">
+                    <!-- <button class="free"  id='sighUp' name="signup_submit"><a href="./authentication.html">Create my free Account</a> </button> -->
+                </div>
+        <!-- </form> -->
         <div class="up">
             <h1>
                 By signing up, I agree to LiveOn’s <span class="colour"> Terms of Service</span> and <span class="colour">Privacy Policy.</span>
@@ -85,6 +88,60 @@
    
    </section>
 
+   <script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-analytics.js";
+  import { getDatabase, set, ref, update } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-database.js";
+  import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut, } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-auth.js";
+  
+  const firebaseConfig = {
+    apiKey: "AIzaSyCIKlgBFTRs2u2qBzZaZqoFhSjykRkk71Y",
+    authDomain: "liveon-4fa75.firebaseapp.com",
+    databaseURL: "https://liveon-4fa75-default-rtdb.firebaseio.com",
+    projectId: "liveon-4fa75",
+    storageBucket: "liveon-4fa75.appspot.com",
+    messagingSenderId: "641102602271",
+    appId: "1:641102602271:web:876e657551075239b0b52a",
+    measurementId: "G-9RQS587BPM"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const database = getDatabase(app);
+  const analytics = getAnalytics(app);
+    const auth = getAuth();
+    const sighUp = document.querySelector('#sighUp')
+console.log('i8u87');
+    sighUp.addEventListener('click',(e) => {
+        console.log(sighUp);
+var email = document.getElementById('email').value;
+var password = document.getElementById('password').value;
+var username = document.getElementById('username').value;
+
+createUserWithEmailAndPassword(auth, email, password)
+  .then((userCredential) => {
+   // Signed in 
+    const user = userCredential.user;
+
+    set(ref(database, 'users/' + user.uid),{
+        username: username,
+        email: email
+    })
+
+    alert('user created!');
+    window.location.replace("./authentication.html");
+    // ...
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+
+    alert(errorMessage);
+  // ..
+  });
+
+});
+
+  </script>
     
 </body>
 </html>
