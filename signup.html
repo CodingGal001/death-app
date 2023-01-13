@@ -89,11 +89,11 @@
    </section>
 
    <script type="module">
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-analytics.js";
-  import { getDatabase, set, ref, update } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-database.js";
-  import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut, } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-auth.js";
-  
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-analytics.js";
+  import { getDatabase, set, ref, update, push  } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
+  import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut, updateProfile} from "https://www.gstatic.com/firebasejs/9.15.0/firebase-auth.js";
+//   import {  updateProfile } from "firebase/auth"
   const firebaseConfig = {
     apiKey: "AIzaSyCIKlgBFTRs2u2qBzZaZqoFhSjykRkk71Y",
     authDomain: "liveon-4fa75.firebaseapp.com",
@@ -122,13 +122,40 @@ createUserWithEmailAndPassword(auth, email, password)
    // Signed in 
     const user = userCredential.user;
 
+updateProfile( auth.currentUser, {
+  displayName: username,
+}).then(() => {
+
     set(ref(database, 'users/' + user.uid),{
         username: username,
         email: email
     })
+//     const postListRef = ref(database, 'users');
+// const newPostRef = push(postListRef);
+// set(newPostRef, {
+//     username: username,
+//         email: email,
+//         uid: user.uid
+// });
+// const db = getDatabase();
+// set(ref(data, 'users/' + user.uid), {
+//   username: username,
+//   email: email,
+// })
+// .then(() => {
+//   // Data saved successfully!
+//   console.log('saved');
+// })
+// .catch((error) => {
+//   // The write failed...
+//   console.log('error');
+// });
 
     alert('user created!');
-    window.location.replace("./authentication.html");
+    window.location.replace("./login.html");
+})
+
+   
     // ...
   })
   .catch((error) => {
