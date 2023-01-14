@@ -122,7 +122,7 @@ createUserWithEmailAndPassword(auth, email, password)
    // Signed in 
     const user = userCredential.user;
    await sendSignInLinkToEmail(auth, email, {
-    url: 'https://death-app-peach.vercel.app/dashboard.html',
+    url: 'http://127.0.0.1:5500',
     handleCodeInApp: true,
     
     
@@ -135,26 +135,7 @@ updateProfile( auth.currentUser, {
         username: username,
         email: email
     })
-//     const postListRef = ref(database, 'users');
-// const newPostRef = push(postListRef);
-// set(newPostRef, {
-//     username: username,
-//         email: email,
-//         uid: user.uid
-// });
-// const db = getDatabase();
-// set(ref(data, 'users/' + user.uid), {
-//   username: username,
-//   email: email,
-// })
-// .then(() => {
-//   // Data saved successfully!
-//   console.log('saved');
-// })
-// .catch((error) => {
-//   // The write failed...
-//   console.log('error');
-// });
+
 
     alert('user created!');
     window.location.replace("./authentication.html");

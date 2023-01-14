@@ -8,6 +8,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./document.css">
+
 </head>
 
 <body>
@@ -30,8 +31,50 @@
     </section>
     <!-- end header  -->
     
-        <section class="sec">
-            <img src="./images/Frame 722.png" alt="">
+        <section >
+           <div class="sec">
+            <div>
+                <img src="./images/Frame 722.png" alt="">
+            </div>
+           </div>
+
+           <div class="secs">
+            <div>
+                <button id="myBtn">Update Profile</button>   
+            </div>
+           </div>
+             <!-- modal  -->
+        <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <!-- <p>Some text in the Modal..</p> -->
+
+              <form action="" id="submit">
+                   <h1>Upload a File</h1>
+                    <div>
+                        <h4>Drag & drop a file here or browse</h4>
+                        <p>Max file size is 30MB. Only document files (PDF, DOC, DOCX, ZIP) 
+                            and image files (JPG, GIF, PNG) are allowed</p>
+                    </div>
+                    <div>
+                        
+                    </div>
+                       <div>
+                        <div>
+                            <button class="secs-button">
+                            Save
+                        </button>
+                        </div>
+                       </div>
+                    </div>
+              </form>
+            </div>
+          
+          </div>
+
+          <!-- end modal  -->
         </section>
 
     <!-- footer  -->
@@ -120,6 +163,8 @@ console.log(el);
 
                                                 
         </script>
+
+        <script src="./js/main.js"></script>
 </body>
 
 </html>
