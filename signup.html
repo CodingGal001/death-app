@@ -22,7 +22,7 @@
                 <li class="topper"> <a href="./contact.html"> Contact us</a></li> 
                 <li class="topper"> <a href="./login.html">Login</a> </li>
                 <div>
-                 <button><a href="./signup.html">sign Up</a></button>
+                 <button><a href="./signup.html">Sign Up</a></button>
                 </div>
                 </ul>
             </div>
@@ -92,7 +92,7 @@
   import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
   import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-analytics.js";
   import { getDatabase, set, ref, update, push  } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
-  import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut, updateProfile} from "https://www.gstatic.com/firebasejs/9.15.0/firebase-auth.js";
+  import { getAuth, createUserWithEmailAndPassword,sendSignInLinkToEmail, signInWithEmailAndPassword, onAuthStateChanged, signOut, updateProfile} from "https://www.gstatic.com/firebasejs/9.15.0/firebase-auth.js";
 //   import {  updateProfile } from "firebase/auth"
   const firebaseConfig = {
     apiKey: "AIzaSyCIKlgBFTRs2u2qBzZaZqoFhSjykRkk71Y",
@@ -118,10 +118,15 @@ var password = document.getElementById('password').value;
 var username = document.getElementById('username').value;
 
 createUserWithEmailAndPassword(auth, email, password)
-  .then((userCredential) => {
+  .then( async(userCredential) => {
    // Signed in 
     const user = userCredential.user;
-
+   await sendSignInLinkToEmail(auth, email, {
+    url: 'https://death-app-peach.vercel.app/dashboard.html',
+    handleCodeInApp: true,
+    
+    
+   })
 updateProfile( auth.currentUser, {
   displayName: username,
 }).then(() => {
@@ -152,9 +157,10 @@ updateProfile( auth.currentUser, {
 // });
 
     alert('user created!');
-    window.location.replace("./login.html");
+    window.location.replace("./authentication.html");
+    
+    
 })
-
    
     // ...
   })

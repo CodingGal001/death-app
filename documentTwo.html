@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./document.css">
+</head>
+
+<body>
+    <!-- header  -->
+    <section class="all">
+        <div class="topper">
+            <div class="topper">
+                <a href="/"><img src="./images/Frame 8.png" alt=""></a>
+            </div>
+            <ul>
+                <li class="topper" ><a href="./dashboard.html">Dashboard</a></li>
+                <li class="topper" style="color: #7C2946;"><a href="./document.html">Document</a></li>
+                <li class="topper">Help</li>
+
+                <div>
+                    <button class="dera" id="nam"></button>
+                </div>
+            </ul>
+        </div>
+    </section>
+    <!-- end header  -->
+    
+        <section class="sec">
+            <img src="./images/Frame 722.png" alt="">
+        </section>
+
+    <!-- footer  -->
+    <section class="footer">
+        <div class="topfooter">
+            <div>
+                <a href="/"><img src="./images/Frame 8 (1).png" alt=""></a>
+                <div style="display: flex;">
+                    <img src="" alt="">
+                    <p>help.liveon@gmail.com</p>
+                </div>
+                <div class="socio">
+                    <img src="./images/Phone.png" alt="">
+                    <p>08022334455, 07016990033</p>
+                </div>
+                <div class="social">
+                    <img src="./images/akar-icons_linkedin-box-fill.png" alt="">
+                    <img src="./images/bxl_facebook.png" alt="">
+                    <img src="./images/akar-icons_twitter-fill.png" alt="">
+                    <img src="./images/akar-icons_instagram-fill.png" alt="">
+                </div>
+
+            </div>
+            <div>
+                <h1><a href="/">Home</a></h1>
+                <p><a href="#about">Who we are</a></p>
+                <p><a href="#works">How it works</a></p>
+            </div>
+            <div>
+                <h1>Quick links</h1>
+                <p><a href="./about.html">About us</a></p>
+                <p><a href="./faq.html">FAQ</a></p>
+                <p><a href="./terms.html">Terms of service</a></p>
+                <p><a href="./policy.html">Privacy Policy</a></p>
+            </div>
+            <div>
+                <h1>Customer Service </h1>
+                <p> <a href="./contact.html"> Contact us</a></p>
+                <p>Account help</p>
+            </div>
+        </div>
+        <div class="livefooter">
+            <h5>LiveOn is an application for individuals willing to prepare against illness or death. <br>
+                When you register on our platform, you are bound by our terms of service as well as privacy policy.</h5>
+        </div>
+    </section>
+    <!-- end footer  -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-analytics.js";
+        import { getDatabase, set, ref, update } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
+        import { getAuth,  onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-auth.js";
+        
+        const firebaseConfig = {
+          apiKey: "AIzaSyCIKlgBFTRs2u2qBzZaZqoFhSjykRkk71Y",
+          authDomain: "liveon-4fa75.firebaseapp.com",
+          databaseURL: "https://liveon-4fa75-default-rtdb.firebaseio.com",
+          projectId: "liveon-4fa75",
+          storageBucket: "liveon-4fa75.appspot.com",
+          messagingSenderId: "641102602271",
+          appId: "1:641102602271:web:876e657551075239b0b52a",
+          measurementId: "G-9RQS587BPM"
+        };
+      
+        const app = initializeApp(firebaseConfig);
+        const database = getDatabase(app);
+        const analytics = getAnalytics(app);
+          const auth = getAuth();
+        
+      console.log('i8u87');
+      
+      onAuthStateChanged(auth, (user) => {
+  if (user) {
+    // User is signed in, see docs for a list of available properties
+    // https://firebase.google.com/docs/reference/js/firebase.User
+    const uid = user.uid;
+    console.log(uid, user.displayName);
+    const el =  document.querySelector('#nam').innerHTML = user.displayName
+    
+console.log(el);
+  } else {
+    
+  }
+});
+ 
+
+                                                
+        </script>
+</body>
+
+</html>
