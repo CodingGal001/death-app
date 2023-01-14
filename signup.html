@@ -121,12 +121,12 @@ createUserWithEmailAndPassword(auth, email, password)
   .then( async(userCredential) => {
    // Signed in 
     const user = userCredential.user;
-   await sendSignInLinkToEmail(auth, email, {
-    url: 'http://127.0.0.1:5500',
-    handleCodeInApp: true,
+//    await sendSignInLinkToEmail(auth, email, {
+//     url: 'http://127.0.0.1:5500',
+//     handleCodeInApp: true,
     
     
-   })
+//    })
 updateProfile( auth.currentUser, {
   displayName: username,
 }).then(() => {
