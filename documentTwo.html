@@ -8,6 +8,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./document.css">
+
 </head>
 
 <body>
@@ -18,9 +19,9 @@
                 <a href="/"><img src="./images/Frame 8.png" alt=""></a>
             </div>
             <ul>
-                <li class="topper" ><a href="./dashboard.html">Dashboard</a></li>
+                <li class="topper" ><a href="./DashboardTwo.html">Dashboard</a></li>
                 <li class="topper" style="color: #7C2946;"><a href="./document.html">Document</a></li>
-                <li class="topper">Help</li>
+                <li class="topper"><a href="./contact.html">Help</a></li>
 
                 <div>
                     <button class="dera" id="nam"></button>
@@ -30,8 +31,91 @@
     </section>
     <!-- end header  -->
     
-        <section class="sec">
-            <img src="./images/Frame 722.png" alt="">
+        <section >
+            <div class="doc">
+                <h1>Documents</h1>
+                <p>You can upload and store your key documents here, including files, photos and your will.</p>
+            </div>
+         
+
+         <div class="push">
+            <div class="loadd">
+                <div>
+                    <div class="img">
+                        <img src="./images/Frame 980.png" alt="">
+                    </div>
+                    </div>
+                    <div class="update">
+                        <h1>File name</h1>
+                        <h1>Last Updated</h1>
+                    </div>
+                    <div class="update will">
+                        <h1>My Will</h1>
+                        <h1>Last Updated</h1>
+                    </div>
+                    <div class="secs">
+                        <button id="myBtn">Upload</button> 
+                    </div>  
+                </div>
+               </div>
+         </div>
+             <!-- modal  -->
+        <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <!-- <p>Some text in the Modal..</p> -->
+
+              <form action="" id="submit">
+                   <h1>Upload a File</h1>
+                    <div class="drag">
+                        <h4>Drag & drop a file here or browse</h4>
+                        <p>Max file size is 30MB. Only document files (PDF, DOC, DOCX, ZIP) 
+                            and image files (JPG, GIF, PNG) are allowed</p>
+                    </div>
+                    <div>
+                        <form action="">
+                            <div class="formy">
+                                <label for="">Document Type</label>
+                                <select name="" id="">
+                                    <option value="">Select...</option>
+                                    <option value="">Will</option>
+                                    <option value="">Power of Attorney</option>
+                                    <option value="">Asset Inventory</option>
+                                    <option value="">Health Care Proxy</option>
+                                    <option value="">Life Insurance Policy</option>
+                                    <option value="">Memorial/Funeral Plan</option>
+                                    <option value="">Other</option>
+                                </select>
+                            </div>
+                            <div class="formy">
+                                <label for="">Document Name</label>
+                                <input type="text" name="" id="">
+                            </div>
+
+                            <div class="formy">
+                                <label for="">Notes (Optional)</label>
+                                <textarea name="" id="" cols="30" rows="10" placeholder="Enter information about this document. Example: where a physical copy of the 
+                                document can be located."></textarea>
+                            </div>
+                        </form>
+                    </div>
+                       <div> 
+                        <div class="btn">
+                            <button class="cancel close">Cancel</button>
+                            <button class="secs-button">
+                            Save
+                        </button>
+                        </div>
+                       </div>
+                    </div>
+              </form>
+            </div>
+          
+          </div>
+
+          <!-- end modal  -->
         </section>
 
     <!-- footer  -->
@@ -116,10 +200,33 @@ console.log(el);
     
   }
 });
+
+const form = document.querySelector('#submit')
+form.addEventListener('submit', async(e)=>{
+    e.preventDefault()
+    console.log(e.target[1].value);
+    set(ref(database, 'users'), {
+        firstName: e.target[0].value,
+  lastName: e.target[1].value,
+  date: e.target[2].value,
+  address: e.target[3].value,
+  address2: e.target[4].value,
+  city: e.target[5].value,
+  state: e.target[6].value,
+    postal: e.target[7].value,
+  number: e.target[8].value,
+  email: e.target[9].value,
+  });
+
+  alert('profile updated!');
+    window.location.replace("./DashboardTwo.html");                                                                                                                                                                     
+} )
  
 
                                                 
         </script>
+
+        <script src="./js/main.js"></script>
 </body>
 
 </html>

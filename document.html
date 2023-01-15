@@ -32,6 +32,9 @@
     <!-- end header  -->
     
         <section >
+            <div class="doc">
+                <h1>Documents</h1>
+            </div>
            <div class="sec">
             <div>
                 <img src="./images/Frame 722.png" alt="">
@@ -40,7 +43,7 @@
 
            <div class="secs">
             <div>
-                <button id="myBtn">Update Profile</button>   
+                <button id="myBtn">Update</button>   
             </div>
            </div>
              <!-- modal  -->
@@ -48,23 +51,48 @@
 
             <!-- Modal content -->
             <div class="modal-content">
-              <span class="close">&times;</span>
+              <!-- <span class="close">&times;</span> -->
               <!-- <p>Some text in the Modal..</p> -->
 
               <form action="" id="submit">
                    <h1>Upload a File</h1>
-                    <div>
+                    <div class="drag">
                         <h4>Drag & drop a file here or browse</h4>
                         <p>Max file size is 30MB. Only document files (PDF, DOC, DOCX, ZIP) 
                             and image files (JPG, GIF, PNG) are allowed</p>
                     </div>
                     <div>
-                        
+                        <form action="" id="submit">
+                            <div class="formy">
+                                <label for="">Document Type</label>
+                                <select name="" id="">
+                                    <option value="">Select...</option>
+                                    <option value="">Will</option>
+                                    <option value="">Power of Attorney</option>
+                                    <option value="">Asset Inventory</option>
+                                    <option value="">Health Care Proxy</option>
+                                    <option value="">Life Insurance Policy</option>
+                                    <option value="">Memorial/Funeral Plan</option>
+                                    <option value="">Other</option>
+                                </select>
+                            </div>
+                            <div class="formy">
+                                <label for="">Document Name</label>
+                                <input type="text" name="" id="">
+                            </div>
+
+                            <div class="formy">
+                                <label for="">Notes (Optional)</label>
+                                <textarea name="" id="" cols="30" rows="10" placeholder="Enter information about this document. Example: where a physical copy of the 
+                                document can be located."></textarea>
+                            </div>
+                        </form>
                     </div>
-                       <div>
-                        <div>
+                       <div> 
+                        <div class="btn">
+                            <button class="cancel close">Cancel</button>
                             <button class="secs-button">
-                            Save
+                            <a href="./documentTwo.html">Save</a>
                         </button>
                         </div>
                        </div>
@@ -159,6 +187,27 @@ console.log(el);
     
   }
 });
+
+const form = document.querySelector('#submit')
+form.addEventListener('submit', async(e)=>{
+    e.preventDefault()
+    console.log(e.target[1].value);
+    set(ref(database, 'users'), {
+        firstName: e.target[0].value,
+  lastName: e.target[1].value,
+  date: e.target[2].value,
+  address: e.target[3].value,
+  address2: e.target[4].value,
+  city: e.target[5].value,
+  state: e.target[6].value,
+    postal: e.target[7].value,
+  number: e.target[8].value,
+  email: e.target[9].value,
+  });
+
+  alert('profile updated!');
+    window.location.replace("./documentTwo.html");                                                                                                                                                                     
+} )
  
 
                                                 

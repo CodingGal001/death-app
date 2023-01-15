@@ -9,6 +9,15 @@
     font-size: 32px;
     color: #290E17;
 }
+.iden h1{
+  font-family: 'Times';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 46px;
+  color: #290E17;
+  padding: 117px 0;
+}
 .welcome p {
     margin-top: 22px;
     width: 488px;
@@ -48,6 +57,24 @@
     outline: none;
     border: none;
     color: #fff;
+    
+}
+.dett{
+  display: flex;
+  justify-content: flex-end;
+  float: right;
+  padding-left: 80%;
+}
+.dett button{
+  width: 161px;
+  height: 56px;
+  background: #7C2946;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  color: #fff;
+  margin-top: 30px;
+  float: right;
 }
 .det p{
     width: 284px;
